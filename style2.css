@@ -1,0 +1,193 @@
+@font-face {
+    font-family: "crashout";
+    src: url("CrashOutVF.ttf") format("truetype");
+}
+
+body {
+	font-family: "crashout";
+    font-size: 120px;
+}
+
+@font-face {
+    font-family: "crashout";
+    src: url("CrashOutVF.ttf") format("truetype");
+}
+
+body {
+    font-family: "crashout";
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.container div {
+    padding: 10px;
+    font-size: 150px;
+    display: grid;
+    place-items: center;
+    
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+	animation-name: spin;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+    font-variation-settings: "TRAN" 0;
+}
+
+.box1 {
+    color: white;
+    background-color: black;
+    animation-name: background-change;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(1, start);
+}
+
+.box1:hover {
+	font-variation-settings: "TRAN" 100;
+	color: black;
+    transform: scale(200%) rotate(270deg);
+    transition: 2s;
+    cursor: crosshair;
+}
+
+.box1:active {
+	font-variation-settings: "TRAN" 100;
+	color: blue;
+    transform: scale(200%) rotate(270deg);
+    transition: 2s;
+}
+
+.box2 {
+    color: black;
+    animation-name: background-change2;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(1, start);
+}
+
+.box2:hover {
+	font-variation-settings: "TRAN" 100;
+	color: white;
+    transform: scale(200%) rotate(270deg);
+    transition: 2s;
+    cursor: crosshair;
+}
+
+.box2:active {
+	font-variation-settings: "TRAN" 100;
+	color:red;
+    transform: scale(200%) rotate(270deg);
+    transition: 2s;
+}
+
+.box4 {
+    color: white;
+    background-color: black;
+    animation-name: background-change;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(1, start);
+}
+
+.box4:hover {
+	font-variation-settings: "TRAN" 100;
+	color: black;
+    transform: scale(200%) rotate(270deg);
+    transition: 2s;
+    cursor: crosshair;
+}
+
+.box4:active {
+	font-variation-settings: "TRAN" 100;
+	color:purple;
+    transform: scale(200%) rotate(270deg);
+    transition: 2s;
+}
+
+.box3 {
+    color: black;
+    animation-name: background-change2;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(1, start);
+}
+
+.box3:hover {
+	font-variation-settings: "TRAN" 100;
+	color: white;
+    transform: scale(200%) rotate(270deg);
+    transition: 2s;
+    cursor: crosshair;
+}
+
+.box3:active {
+	font-variation-settings: "TRAN" 100;
+	color:orange;
+    transform: scale(200%) rotate(270deg);
+    transition: 2s;
+}
+
+
+.test-animation {
+	/* properties for animations */
+	animation-name: example-animation;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+    font-variation-settings: "TRAN" 0;
+}
+
+/* define the animation */
+@keyframes spin {
+	0% {
+        font-variation-settings: "TRAN" 100;
+	}
+	25% {
+		
+	}
+	50% {
+		
+	}
+	75% {
+		
+	}
+	100% {
+
+	}
+}
+
+@keyframes background-change {
+	50% {
+		background-color: white;
+        color: black;
+        font-variation-settings: "TRAN" 1000;
+	}
+}
+
+@keyframes background-change2 {
+	50% {
+		background-color: black;
+        color: white;
+        font-variation-settings: "TRAN" 1000;
+	}
+}
+
+@media (max-width: 500px) {
+	body {
+		background-color: red;
+	}
+}
